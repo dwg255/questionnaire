@@ -1,0 +1,86 @@
+#container {
+  overflow: hidden;
+}
+#container #description {
+  margin: 0 10px 16px;
+  padding: 10px 0 26px;
+  border-bottom: 1px dashed #ccc;
+  font-size: 14px;
+  line-height: 24px;
+  color: #333;
+}
+#container #question {
+  display: flex;
+  flex-direction: column;
+}
+#container #question .field {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 6px;
+  padding: 10px 14px;
+  border: 1px solid #fff;
+}
+#container #question .field .field-label {
+  position: relative;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0 0 8px;
+}
+#container #question .field .field-label .req {
+  position: absolute;
+  left: -12px;
+  color: red;
+}
+#container #question .field .field-input {
+  display: flex;
+  border: 1px solid #e0e0e0;
+  margin: 5px 0;
+  background-color: #fff;
+  padding: 0;
+  border-radius: 4px;
+}
+#container #question .field .field-input input {
+  flex: 1;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  border: none!important;
+}
+#container #question .field .field-input > div {
+  width: 100%;
+}
+#container #question .field #showDatePicker {
+  width: 100%;
+  position: relative;
+}
+#container #question .field #showDatePicker input {
+  padding-left: 40px;
+}
+#container #question .field #showDatePicker img {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 18px;
+  height: 18px;
+}
+#container #question .qtypetip {
+  color: #999;
+  font-weight: normal;
+}
+#container .weui-form {
+  padding: 0;
+}
+#container #header {
+  padding: 10px 0;
+}
+#container #header {
+  padding-top: 0;
+}
+#container #header .weui-form__title {
+  background-color: skyblue;
+  padding: 5px 0;
+  color: #fff;
+}
+#container #header img {
+  width: 100%;
+}

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>山西转型综合改革示范区金融服务平台</title>
+    <link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/2.3.0/weui.min.css" />
+    <link rel="stylesheet" href="./css/index2.css">
+</head>
+
+<body>
+    <div id="container" class="page form_page js_show">
+        <div class="weui-form">
+            <div class="weui-form__text-area" id="header">
+                <h2 class="weui-form__title">企业融资需求表</h2>
+                <img src="./images/banner.png" alt="">
+            </div>
+            <div id="description">
+                <span>&nbsp;&nbsp;为了更好的为您提供金融服务，请认真填写《企业融资需求调查表》，保证数据的真实及完整性！</span>
+            </div>
+            <div id="question">
+                <div class="field">
+                    <div class="field-label">
+                        1. 企业名称
+                        <span class="req">*</span>
+                    </div>
+                    <div class="field-input">
+                        <div class="weui-cell__bd">
+                            <input name="company-name" class="weui-input" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="field-label">
+                        2. 注册时间
+                        <span class="req">*</span>
+                    </div>
+                    <div class="field-input">
+                        <div class="weui-cell__bd" id="showDatePicker">
+                            <input readonly name="register-time" class="weui-input" placeholder="">
+                            <img src="./images/date@2x.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="field-label">
+                        3. 主营业务
+                        <span class="req">*</span>
+                    </div>
+                    <div class="field-input">
+                        <div class="weui-cell__bd">
+                            <input name="main-bussiness" class="weui-input" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="field-label">
+                        4. 注册资本（单位/万元）
+                        <span class="req">*</span>
+                    </div>
+                    <div class="field-input">
+                        <div class="weui-cell__bd">
+                            <input type="number" name="regist-capital" class="weui-input" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="field-label">
+                        5. 实收资本（单位/万元）
+                        <span class="req">*</span>
+                    </div>
+                    <div class="field-input">
+                        <div class="weui-cell__bd">
+                            <input type="number" name="paid-capital" class="weui-input" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="field-label">
+                        6. 纳税等级
+                        <span class="req">*</span>
+                    </div>
+                    <div class="field-input">
+                        <div class="weui-cell__bd" id="tax-level">
+                            <input readonly name="tax-level" class="weui-input" placeholder="A" value="A">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="field-label">
+                        7. 上一年纳税总额（单位/万元）
+                        <span class="req">*</span>
+                    </div>
+                    <div class="field-input">
+                        <div class="weui-cell__bd">
+                            <input type="number" name="tax-amount" class="weui-input" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="field-label">
+                        8. 上一年度总资产（单位/万元）
+                        <span class="req">*</span>
+                    </div>
+                    <div class="field-input">
+                        <div class="weui-cell__bd">
+                            <input type="number" name="assets" class="weui-input" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="field-label">
+                        9. 上一年度总负债（单位/万元）
+                        <span class="req">*</span>
+                    </div>
+                    <div class="field-input">
+                        <div class="weui-cell__bd">
+                            <input type="number" name="liabilities" class="weui-input" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="field-label">
+                        10. 银行贷款（单位/万元）
+                        <span class="req">*</span>
+                    </div>
+                    <div class="field-input">
+                        <div class="weui-cell__bd">
+                            <input type="number" name="loan" class="weui-input" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="field-label">
+                        11. 上一年度营业收入（单位/万元）
+                        <span class="req">*</span>
+                    </div>
+                    <div class="field-input">
+                        <div class="weui-cell__bd">
+                            <input type="number" name="income" class="weui-input" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="field-label">
+                        12. 上一年度净利润（单位/万元）
+                        <span class="req">*</span>
+                    </div>
+                    <div class="field-input">
+                        <div class="weui-cell__bd">
+                            <input type="number" name="profit" class="weui-input" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="field-label">
+                        13. 拟融资额度（单位/万元）
+                        <span class="req">*</span>
+                    </div>
+                    <div class="field-input">
+                        <div class="weui-cell__bd">
+                            <input type="number" name="account" class="weui-input" placeholder="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="field-label">
+                        14. 资金用途 <span class="qtypetip">【多选】</span>
+                        <span class="req">*</span>
+                    </div>
+                    <div class="field-input">
+                        <div class="weui-cells__group weui-cells__group_form">
+                            <div class="weui-cells weui-cells_checkbox">
+                                <label class="weui-cell weui-cell_active weui-check__label" for="p1">
+                                <div class="weui-cell__hd">
+                                    <input type="checkbox" class="weui-check" name="purpose" id="p1" checked="checked">
+                                    <i class="weui-icon-checked"></i>
+                                </div>
+                                <div class="weui-cell__bd">
+                                    <p>流动资金贷款</p>
+                                </div>
+                            </label>
+                                <label class="weui-cell weui-cell_active weui-check__label" for="p2">
+                                <div class="weui-cell__hd">
+                                    <input type="checkbox" name="purpose" class="weui-check" id="p2">
+                                    <i class="weui-icon-checked"></i>
+                                </div>
+                                <div class="weui-cell__bd">
+                                    <p>固定资产贷款</p>
+                                </div>
+                            </label>
+                                <label class="weui-cell weui-cell_active weui-check__label" for="p3">
+                                <div class="weui-cell__hd">
+                                    <input type="checkbox" name="purpose" class="weui-check" id="p3">
+                                    <i class="weui-icon-checked"></i>
+                                </div>
+                                <div class="weui-cell__bd">
+                                    <p>项目贷款</p>
+                                </div>
+                            </label>
+                                <label class="weui-cell weui-cell_active weui-check__label" for="p4">
+                                <div class="weui-cell__hd">
+                                    <input type="checkbox" name="purpose" class="weui-check" id="p4">
+                                    <i class="weui-icon-checked"></i>
+                                </div>
+                                <div class="weui-cell__bd">
+                                    <p>其他</p>
+                                </div>
+                            </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="field-label">
+                        15. 担保方式 <span class="qtypetip">【多选】</span>
+                        <span class="req">*</span>
+                    </div>
+                    <div class="field-input">
+                        <div class="weui-cells__group weui-cells__group_form">
+                            <div class="weui-cells weui-cells_checkbox">
+                                <label class="weui-cell weui-cell_active weui-check__label" for="s1">
+                                <div class="weui-cell__hd">
+                                    <input type="checkbox" class="weui-check" name="guarantee" id="s1" checked="checked">
+                                    <i class="weui-icon-checked"></i>
+                                </div>
+                                <div class="weui-cell__bd">
+                                    <p>房产抵押</p>
+                                </div>
+                            </label>
+                                <label class="weui-cell weui-cell_active weui-check__label" for="s2">
+                                <div class="weui-cell__hd">
+                                    <input type="checkbox" name="guarantee" class="weui-check" id="s2">
+                                    <i class="weui-icon-checked"></i>
+                                </div>
+                                <div class="weui-cell__bd">
+                                    <p>土地抵押</p>
+                                </div>
+                            </label>
+                                <label class="weui-cell weui-cell_active weui-check__label" for="s3">
+                                <div class="weui-cell__hd">
+                                    <input type="checkbox" name="guarantee" class="weui-check" id="s3">
+                                    <i class="weui-icon-checked"></i>
+                                </div>
+                                <div class="weui-cell__bd">
+                                    <p>股权质押</p>
+                                </div>
+                            </label>
+                                <label class="weui-cell weui-cell_active weui-check__label" for="s4">
+                                <div class="weui-cell__hd">
+                                    <input type="checkbox" name="guarantee" class="weui-check" id="s4">
+                                    <i class="weui-icon-checked"></i>
+                                </div>
+                                <div class="weui-cell__bd">
+                                    <p>存货质押</p>
+                                </div>
+                            </label>
+                                <label class="weui-cell weui-cell_active weui-check__label" for="s5">
+                                <div class="weui-cell__hd">
+                                    <input type="checkbox" name="guarantee" class="weui-check" id="s5">
+                                    <i class="weui-icon-checked"></i>
+                                </div>
+                                <div class="weui-cell__bd">
+                                    <p>存单质押</p>
+                                </div>
+                            </label>
+                                <label class="weui-cell weui-cell_active weui-check__label" for="s6">
+                                <div class="weui-cell__hd">
+                                    <input type="checkbox" name="guarantee" class="weui-check" id="s6">
+                                    <i class="weui-icon-checked"></i>
+                                </div>
+                                <div class="weui-cell__bd">
+                                    <p>股权质押</p>
+                                </div>
+                            </label>
+                                <label class="weui-cell weui-cell_active weui-check__label" for="s7">
+                                <div class="weui-cell__hd">
+                                    <input type="checkbox" name="guarantee" class="weui-check" id="s7">
+                                    <i class="weui-icon-checked"></i>
+                                </div>
+                                <div class="weui-cell__bd">
+                                    <p>订单融资</p>
+                                </div>
+                            </label>
+                                <label class="weui-cell weui-cell_active weui-check__label" for="s8">
+                                <div class="weui-cell__hd">
+                                    <input type="checkbox" name="guarantee" class="weui-check" id="s8">
+                                    <i class="weui-icon-checked"></i>
+                                </div>
+                                <div class="weui-cell__bd">
+                                    <p>知识产权质押</p>
+                                </div>
+                            </label>
+                                <label class="weui-cell weui-cell_active weui-check__label" for="s9">
+                                <div class="weui-cell__hd">
+                                    <input type="checkbox" name="guarantee" class="weui-check" id="s9">
+                                    <i class="weui-icon-checked"></i>
+                                </div>
+                                <div class="weui-cell__bd">
+                                    <p>应收账款质押</p>
+                                </div>
+                            </label>
+                                <label class="weui-cell weui-cell_active weui-check__label" for="s10">
+                                <div class="weui-cell__hd">
+                                    <input type="checkbox" name="guarantee" class="weui-check" id="s10">
+                                    <i class="weui-icon-checked"></i>
+                                </div>
+                                <div class="weui-cell__bd">
+                                    <p>保证</p>
+                                </div>
+                            </label>
+                                <label class="weui-cell weui-cell_active weui-check__label" for="s11">
+                                <div class="weui-cell__hd">
+                                    <input type="checkbox" name="guarantee" class="weui-check" id="s11">
+                                    <i class="weui-icon-checked"></i>
+                                </div>
+                                <div class="weui-cell__bd">
+                                    <p>信用</p>
+                                </div>
+                            </label>
+                                <label class="weui-cell weui-cell_active weui-check__label" for="s12">
+                                <div class="weui-cell__hd">
+                                    <input type="checkbox" name="guarantee" class="weui-check" id="s12">
+                                    <i class="weui-icon-checked"></i>
+                                </div>
+                                <div class="weui-cell__bd">
+                                    <p>其他</p>
+                                </div>
+                            </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="field-label">
+                        16. 企业联系人
+                        <span class="req">*</span>
+                    </div>
+                    <div class="field-input">
+                        <div class="weui-cell__bd">
+                            <input name="contact" class="weui-input" placeholder="">
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="field-label">
+                        16 联系电话
+                        <span class="req">*</span>
+                    </div>
+                    <div class="field-input">
+                        <div class="weui-cell__bd">
+                            <input type="number" name="phone" class="weui-input" placeholder="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="weui-form__opr-area">
+                <a class="weui-btn weui-btn_primary" href="javascript:" id="submit">确定</a>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+        <script type="text/javascript" src="https://res.wx.qq.com/open/libs/weuijs/1.2.1/weui.min.js"></script>
+        <script type="text/javascript" src="./js/index2.js"></script>
+</body>
+
+</html>
